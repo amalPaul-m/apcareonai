@@ -62,7 +62,7 @@ export default function Navbar() {
                             className="inline-flex items-center gap-2 rounded-lg border border-[var(--primary)]/25 bg-[var(--accent)]/10 px-3 py-2 text-sm font-medium text-[var(--primary)] transition-colors hover:bg-[var(--accent)]/20"
                         >
                             <Download size={16} />
-                            Install PWA
+                            Install
                         </button>
                     )}
                 </div>
