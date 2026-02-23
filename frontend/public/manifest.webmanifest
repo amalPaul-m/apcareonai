@@ -2,13 +2,22 @@
   "name": "apcareon ai",
   "short_name": "apcareon ai",
   "description": "Scan medicine photos and view medicine details in English and Malayalam.",
+  "id": "/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
   "background_color": "#FFFFFF",
   "theme_color": "#FFFFFF",
+  "lang": "en",
   "orientation": "portrait",
+  "prefer_related_applications": false,
   "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
     {
       "src": "/icon-192.png",
       "sizes": "192x192",

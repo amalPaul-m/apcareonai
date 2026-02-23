@@ -9,17 +9,22 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'apcareon ai',
+  applicationName: 'apcareon ai',
   description: 'Identify medicines instantly with AI',
   manifest: '/manifest.webmanifest',
   themeColor: '#FFFFFF',
   appleWebApp: {
     capable: true,
-    statusBarStyle: 'default',
+    statusBarStyle: 'black-translucent',
     title: 'apcareon ai'
   },
   icons: {
     icon: '/icon-192.png',
-    apple: '/icon-192.png'
+    apple: '/apple-touch-icon.png'
+  },
+  other: {
+    'mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-capable': 'yes'
   }
 };
 
