@@ -16,6 +16,9 @@ export default function ScanPage() {
     const fileInputRef = useRef(null);
 
     const { setMedicineData } = useMedicine();
+    const apiBaseUrl = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000')
+        .replace(/\/api\/?$/, '')
+        .replace(/\/$/, '');
 
     const handleFileChange = async (e) => {
         const file = e.target.files?.[0];
@@ -37,7 +40,7 @@ export default function ScanPage() {
         formData.append('image', file);
 
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/scan`, {
+            const response = await fetch(`${apiBaseUrl}/api/scan`, {
                 method: 'POST',
                 body: formData
             });
