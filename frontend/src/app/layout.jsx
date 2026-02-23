@@ -3,6 +3,7 @@ import './globals.css';
 import { MedicineProvider } from '@/context/MedicineContext';
 import Navbar from '@/components/Navbar';
 import PWARegister from '@/components/PWARegister';
+import AppLaunchSplash from '@/components/AppLaunchSplash';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -10,7 +11,7 @@ export const metadata = {
   title: 'apcareon ai',
   description: 'Identify medicines instantly with AI',
   manifest: '/manifest.webmanifest',
-  themeColor: '#2563EB',
+  themeColor: '#FFFFFF',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <MedicineProvider>
           <PWARegister />
+          <AppLaunchSplash />
           <Navbar />
           <div className="pt-16 min-h-screen bg-[var(--background)]">
             {children}

@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Download, Pill } from 'lucide-react';
+import { Download } from 'lucide-react';
+import AppLogo from '@/components/AppLogo';
 
 function isStandaloneMode() {
     if (typeof window === 'undefined') return false;
@@ -49,9 +50,7 @@ export default function Navbar() {
         <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--background)]/90 backdrop-blur-md border-b border-[var(--primary)]/15">
             <div className="container mx-auto px-4 h-16 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-[var(--primary)] rounded-lg flex items-center justify-center text-white">
-                        <Pill size={20} />
-                    </div>
+                    <AppLogo />
                     <span className="font-bold text-xl text-[var(--foreground)] tracking-tight">apcareon ai</span>
                 </Link>
 
